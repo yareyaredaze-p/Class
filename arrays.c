@@ -1,28 +1,24 @@
 #include<stdio.h>
 int main(){
-    int arr[5],sum=0,ecount=0,ocount=0;
+    int arr[5];
     for(int i=0;i<5;i++){ 
     printf("Enter values to put in array :");
     scanf("%d",&arr[i]);
     }
-   
-    for(int i=0;i<5;i++){
-    printf("%d\n",arr[i]);}
-    for(int i=0;i<5;i++){
-        sum+=arr[i];
-        }
-        printf("sum =%d\n",sum);
-
-
-
-    for (int i = 0; i < 5; i++)
+    int max=arr[0];
+    int min=arr[0];
+    for(int i=1;i<5;i++)
     {
-        if(arr[i]%2==0){
-           ecount++;
+        if(arr[i]>max)
+        {
+            max=arr[i];
         }
-        else{ocount++;}
+        if(arr[i]<min)
+        {
+            min=arr[i];
+        }
     }
-    printf("%d %d",ecount,ocount);
+    printf("max =%d\nmin=%d",max,min);
     return 0;
 
 
