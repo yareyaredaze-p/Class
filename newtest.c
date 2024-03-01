@@ -13,12 +13,11 @@ void dectobin(int x)
 {
     int temp = x;
     int r = 0; 
-    int a[lol + 1] = 0;
+    int a[11];
 
     int i= 0;
     while (temp > 0)
     {
-        printf("%d", a[i]);
         r= temp % 2; 
         a[i] = r; 
         temp /= 2;
@@ -30,5 +29,5 @@ void dectobin(int x)
         
     }
     
-    printf ("%d is the binary equivalent of %d",a,x);
+
 }
