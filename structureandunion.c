@@ -6,8 +6,7 @@ struct Student{
     float marks;
 };
 void display(struct Student);
-struct Student incrementMarks(struct  Student);
-struct Student incrementAge(struct  Student);
+struct Student increment(struct  Student);
 int main(){
     struct Student s[2];
     for (int i = 0; i < 2; i++)
@@ -19,17 +18,13 @@ int main(){
     {
         printf("Details before update: \n");
         display(s[i]);
-        s[i]=incrementMarks(s[i]);
-        s[i]=incrementAge(s[i]);
+        s[i]=increment(s[i]);
         printf("Details after update: ");
         display(s[i]);
     }
 }
-struct Student incrementMarks(struct Student s){
+struct Student increment(struct Student s){
     s.marks+=1;
-    return s;
-}
-struct Student incrementAge(struct Student s){
     s.age+=2;
     return s;
 }
